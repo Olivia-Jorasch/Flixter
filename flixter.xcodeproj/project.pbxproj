@@ -17,6 +17,8 @@
 		030116B720E411F1006E7D4C /* MoviesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 030116B620E411F1006E7D4C /* MoviesViewController.m */; };
 		0301171520E468AB006E7D4C /* MovieCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0301171420E468AB006E7D4C /* MovieCell.m */; };
 		0301171820E55C6E006E7D4C /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0301171720E55C6E006E7D4C /* DetailsViewController.m */; };
+		0301171B20E5819F006E7D4C /* GridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0301171A20E5819F006E7D4C /* GridViewController.m */; };
+		0301171E20E584FF006E7D4C /* MovieCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0301171D20E584FF006E7D4C /* MovieCollectionCell.m */; };
 		3F5FEB0C683B06B318EF8367 /* libPods-flixter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D06715DA486EE7AC3E1472 /* libPods-flixter.a */; };
 		B9F4292F9BE799F7B2A43E32 /* libPods-flixterUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F2B4A27F59AEC72DCE1D0D74 /* libPods-flixterUITests.a */; };
 		CC0726EAA5C297456FD14C55 /* libPods-flixterTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DCC656D84E3F83E8231DAE3 /* libPods-flixterTests.a */; };
@@ -60,6 +62,10 @@
 		0301171420E468AB006E7D4C /* MovieCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieCell.m; sourceTree = "<group>"; };
 		0301171620E55C6E006E7D4C /* DetailsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailsViewController.h; sourceTree = "<group>"; };
 		0301171720E55C6E006E7D4C /* DetailsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailsViewController.m; sourceTree = "<group>"; };
+		0301171920E5819F006E7D4C /* GridViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GridViewController.h; sourceTree = "<group>"; };
+		0301171A20E5819F006E7D4C /* GridViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GridViewController.m; sourceTree = "<group>"; };
+		0301171C20E584FF006E7D4C /* MovieCollectionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieCollectionCell.h; sourceTree = "<group>"; };
+		0301171D20E584FF006E7D4C /* MovieCollectionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieCollectionCell.m; sourceTree = "<group>"; };
 		039CA40D1088B043DC417714 /* Pods-flixterUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-flixterUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-flixterUITests/Pods-flixterUITests.release.xcconfig"; sourceTree = "<group>"; };
 		07D06715DA486EE7AC3E1472 /* libPods-flixter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-flixter.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DCC656D84E3F83E8231DAE3 /* libPods-flixterTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-flixterTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,9 +132,11 @@
 			children = (
 				030116B820E412BF006E7D4C /* View Controllers */,
 				0301168320E3FED9006E7D4C /* AppDelegate.h */,
-				0301168420E3FED9006E7D4C /* AppDelegate.m */,
 				0301168920E3FED9006E7D4C /* Main.storyboard */,
+				0301168420E3FED9006E7D4C /* AppDelegate.m */,
 				0301168C20E3FEDA006E7D4C /* Assets.xcassets */,
+				0301171C20E584FF006E7D4C /* MovieCollectionCell.h */,
+				0301171D20E584FF006E7D4C /* MovieCollectionCell.m */,
 				0301168E20E3FEDA006E7D4C /* LaunchScreen.storyboard */,
 				0301169120E3FEDA006E7D4C /* Info.plist */,
 				0301169220E3FEDA006E7D4C /* main.m */,
@@ -163,6 +171,8 @@
 				030116B620E411F1006E7D4C /* MoviesViewController.m */,
 				0301171620E55C6E006E7D4C /* DetailsViewController.h */,
 				0301171720E55C6E006E7D4C /* DetailsViewController.m */,
+				0301171920E5819F006E7D4C /* GridViewController.h */,
+				0301171A20E5819F006E7D4C /* GridViewController.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -383,7 +393,9 @@
 				0301169320E3FEDA006E7D4C /* main.m in Sources */,
 				0301171820E55C6E006E7D4C /* DetailsViewController.m in Sources */,
 				0301168520E3FED9006E7D4C /* AppDelegate.m in Sources */,
+				0301171E20E584FF006E7D4C /* MovieCollectionCell.m in Sources */,
 				0301171520E468AB006E7D4C /* MovieCell.m in Sources */,
+				0301171B20E5819F006E7D4C /* GridViewController.m in Sources */,
 				030116B720E411F1006E7D4C /* MoviesViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
