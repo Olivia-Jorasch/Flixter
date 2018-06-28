@@ -36,6 +36,10 @@
     self.descriptionLabel.text = self.movie[@"overview"];
     [self.titleLabel sizeToFit];
     [self.descriptionLabel sizeToFit];
+    // DO THIS
+    // allows descriptions to scroll, but first connect scroller
+    //CGFloat maxHeight = self.descriptionLabel.frame.origin.y + self.descriptionLabel.frame.size.height + 20;
+    //self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width, maxHeight);
 }
 
 - (void)didReceiveMemoryWarning {
