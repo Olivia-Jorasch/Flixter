@@ -13,7 +13,9 @@
 @property (weak, nonatomic) IBOutlet UIImageView *backdropView;
 @property (weak, nonatomic) IBOutlet UIImageView *posterView;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *dateLabel;
 @property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @end
 
 @implementation DetailsViewController
@@ -34,12 +36,13 @@
     
     self.titleLabel.text = self.movie[@"title"];
     self.descriptionLabel.text = self.movie[@"overview"];
+    self.dateLabel.text = self.movie[@"release_date"];
     [self.titleLabel sizeToFit];
     [self.descriptionLabel sizeToFit];
     // DO THIS
     // allows descriptions to scroll, but first connect scroller
-    //CGFloat maxHeight = self.descriptionLabel.frame.origin.y + self.descriptionLabel.frame.size.height + 20;
-    //self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width, maxHeight);
+    CGFloat maxHeight = self.descriptionLabel.frame.origin.y + self.descriptionLabel.frame.size.height + 15;
+    self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width, maxHeight);
 }
 
 - (void)didReceiveMemoryWarning {

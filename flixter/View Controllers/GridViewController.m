@@ -14,6 +14,7 @@
 @interface GridViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
 @property (nonatomic, strong) NSArray *movies;
 @property (strong, nonatomic) IBOutlet UICollectionView *collectionView;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 @end
 
 @implementation GridViewController
@@ -23,6 +24,7 @@
     self.collectionView.dataSource = self;
     self.collectionView.delegate = self;
     [self fetchMovies];
+    [self.activityIndicator startAnimating];
     
     UICollectionViewFlowLayout *layout = self.collectionView.collectionViewLayout;
     
@@ -31,7 +33,7 @@
     
     CGFloat postersPerLine = 3;
     CGFloat posterWidth = (self.collectionView.frame.size.width - layout.minimumInteritemSpacing * (postersPerLine - 1)) / postersPerLine;
-    CGFloat posterHeight = posterWidth * 1.4;
+    CGFloat posterHeight = posterWidth * 1.5;
     layout.itemSize = CGSizeMake(posterWidth, posterHeight);
     
 }
@@ -55,6 +57,7 @@
             self.movies = dataDictionary[@"results"];
             [self.collectionView reloadData];
         }
+        [self.activityIndicator stopAnimating];
     }];
     [task resume];
 }
