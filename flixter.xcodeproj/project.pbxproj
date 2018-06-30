@@ -19,6 +19,8 @@
 		0301171820E55C6E006E7D4C /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0301171720E55C6E006E7D4C /* DetailsViewController.m */; };
 		0301171B20E5819F006E7D4C /* GridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0301171A20E5819F006E7D4C /* GridViewController.m */; };
 		0301171E20E584FF006E7D4C /* MovieCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0301171D20E584FF006E7D4C /* MovieCollectionCell.m */; };
+		0301172120E6C61D006E7D4C /* TrailerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0301172020E6C61D006E7D4C /* TrailerViewController.m */; };
+		0301172320E6D6A0006E7D4C /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0301172220E6D6A0006E7D4C /* WebKit.framework */; };
 		3F5FEB0C683B06B318EF8367 /* libPods-flixter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D06715DA486EE7AC3E1472 /* libPods-flixter.a */; };
 		B9F4292F9BE799F7B2A43E32 /* libPods-flixterUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F2B4A27F59AEC72DCE1D0D74 /* libPods-flixterUITests.a */; };
 		CC0726EAA5C297456FD14C55 /* libPods-flixterTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DCC656D84E3F83E8231DAE3 /* libPods-flixterTests.a */; };
@@ -66,6 +68,9 @@
 		0301171A20E5819F006E7D4C /* GridViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GridViewController.m; sourceTree = "<group>"; };
 		0301171C20E584FF006E7D4C /* MovieCollectionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieCollectionCell.h; sourceTree = "<group>"; };
 		0301171D20E584FF006E7D4C /* MovieCollectionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieCollectionCell.m; sourceTree = "<group>"; };
+		0301171F20E6C61D006E7D4C /* TrailerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrailerViewController.h; sourceTree = "<group>"; };
+		0301172020E6C61D006E7D4C /* TrailerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrailerViewController.m; sourceTree = "<group>"; };
+		0301172220E6D6A0006E7D4C /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		039CA40D1088B043DC417714 /* Pods-flixterUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-flixterUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-flixterUITests/Pods-flixterUITests.release.xcconfig"; sourceTree = "<group>"; };
 		07D06715DA486EE7AC3E1472 /* libPods-flixter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-flixter.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DCC656D84E3F83E8231DAE3 /* libPods-flixterTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-flixterTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0301172320E6D6A0006E7D4C /* WebKit.framework in Frameworks */,
 				3F5FEB0C683B06B318EF8367 /* libPods-flixter.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -173,6 +179,8 @@
 				0301171720E55C6E006E7D4C /* DetailsViewController.m */,
 				0301171920E5819F006E7D4C /* GridViewController.h */,
 				0301171A20E5819F006E7D4C /* GridViewController.m */,
+				0301171F20E6C61D006E7D4C /* TrailerViewController.h */,
+				0301172020E6C61D006E7D4C /* TrailerViewController.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -193,6 +201,7 @@
 		FD2BA39F25FB30AC9E9F58C0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0301172220E6D6A0006E7D4C /* WebKit.framework */,
 				07D06715DA486EE7AC3E1472 /* libPods-flixter.a */,
 				1DCC656D84E3F83E8231DAE3 /* libPods-flixterTests.a */,
 				F2B4A27F59AEC72DCE1D0D74 /* libPods-flixterUITests.a */,
@@ -394,6 +403,7 @@
 				0301171820E55C6E006E7D4C /* DetailsViewController.m in Sources */,
 				0301168520E3FED9006E7D4C /* AppDelegate.m in Sources */,
 				0301171E20E584FF006E7D4C /* MovieCollectionCell.m in Sources */,
+				0301172120E6C61D006E7D4C /* TrailerViewController.m in Sources */,
 				0301171520E468AB006E7D4C /* MovieCell.m in Sources */,
 				0301171B20E5819F006E7D4C /* GridViewController.m in Sources */,
 				030116B720E411F1006E7D4C /* MoviesViewController.m in Sources */,
