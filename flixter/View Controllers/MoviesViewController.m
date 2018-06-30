@@ -33,7 +33,6 @@
     [self.refreshControl addTarget:self action:@selector(fetchMovies) forControlEvents:UIControlEventValueChanged];
     [self.activityIndicator startAnimating];
     [self.tableView insertSubview:self.refreshControl atIndex:0];
-
 }
 
 - (void)fetchMovies {
@@ -60,7 +59,6 @@
             self.filteredMovies = self.movies;
             [self.tableView reloadData];
         }
-        
         [self.refreshControl endRefreshing];
         [self.activityIndicator stopAnimating];
     }];
@@ -69,7 +67,6 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -81,37 +78,29 @@
     NSDictionary *movie = self.filteredMovies[indexPath.row];
     cell.titleLabel.text = movie[@"title"];
     cell.descriptionLabel.text = movie[@"overview"];
-    
     NSString *posterPathString = movie[@"poster_path"];
     NSString *baseURLString = @"https://image.tmdb.org/t/p/w500";
     NSString *fullPosterURLString = [baseURLString stringByAppendingString:posterPathString];
     NSURL *posterURL = [NSURL URLWithString:fullPosterURLString];
     cell.posterView.image = nil;
     [cell.posterView setImageWithURL:posterURL];
-    
     return cell;
 }
 
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
-    
     if (searchText.length != 0) {
-        
         NSPredicate *predicate = [NSPredicate predicateWithBlock:^BOOL(NSDictionary *evaluatedObject, NSDictionary *bindings) {
             NSString *title = evaluatedObject[@"title"];
             return [title containsString:searchText];
         }];
         self.filteredMovies = [self.movies filteredArrayUsingPredicate:predicate];
         NSLog(@"%@", self.filteredMovies);
-        
     }
     else {
         self.filteredMovies = self.movies;
     }
-    
     [self.tableView reloadData];
-    
 }
-
 
 - (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar {
     self.searchBar.showsCancelButton = YES;
@@ -125,15 +114,12 @@
 
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     UITableViewCell *tappedCell = sender;
     NSIndexPath *indexPath = [self.tableView indexPathForCell:tappedCell];
     NSDictionary *movie = self.filteredMovies[indexPath.row];
     DetailsViewController *detailsViewController = [segue destinationViewController];
     detailsViewController.movie = movie;
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
 }
 
 

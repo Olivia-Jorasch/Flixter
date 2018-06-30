@@ -23,6 +23,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     NSLog(@"%@", [self.movie[@"id"] class]);
     NSString *posterPathString = self.movie[@"poster_path"];
     NSString *baseURLString = @"https://image.tmdb.org/t/p/w500";
@@ -40,8 +41,6 @@
     self.dateLabel.text = self.movie[@"release_date"];
     [self.titleLabel sizeToFit];
     [self.descriptionLabel sizeToFit];
-    // DO THIS
-    // allows descriptions to scroll, but first connect scroller
     CGFloat maxHeight = self.descriptionLabel.frame.origin.y + self.descriptionLabel.frame.size.height + 15;
     self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width, maxHeight);
 }
@@ -58,8 +57,6 @@
     NSDictionary *movie = self.movie;
     TrailerViewController *trailerViewController = [segue destinationViewController];
     trailerViewController.movie = movie;
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
 }
 
 @end
